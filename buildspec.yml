@@ -25,5 +25,6 @@ phases:
     run-as: root
     on-failure: ABORT
     commands:
+      - cd api
       - flask run
 
