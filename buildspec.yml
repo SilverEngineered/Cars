@@ -30,7 +30,5 @@ phases:
       - pm2 start npm -- start
 artifacts:
   files:
-    - 'deploy_artifact'
-  base-directory: .
-  name: build-artifact-name
-  discard-paths: no
+    - - '**/*'
+  name: cars-$AWS_REGION
