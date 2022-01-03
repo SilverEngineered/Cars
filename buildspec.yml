@@ -1,0 +1,29 @@
+version: 0.2
+
+run-as: root
+
+env:
+  shell: bash
+  git-credential-helper: no
+
+proxy:
+  upload-artifacts: no
+  logs: no
+
+batch:
+  fast-fail: false
+phases:
+  install:
+    run-as: root
+    on-failure: ABORT
+    commands:
+      - python3 -m venv venv
+      - source venv/bin/activate
+      - pip3 install requirements.txt
+
+  build:
+    run-as: root
+    on-failure: ABORT
+    commands:
+      - flask run
+
