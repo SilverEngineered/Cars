@@ -26,6 +26,5 @@ phases:
     on-failure: ABORT
     commands:
       - cd cars-web-view
-      - npm run build
       - pm2 start npm -- start
 
