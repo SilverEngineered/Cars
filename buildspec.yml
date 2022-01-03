@@ -30,7 +30,7 @@ phases:
       - pm2 start npm -- start
 artifacts:
   files:
-    - '**/*'
-  base-directory: base_dir
+    - 'deploy_artifact'
+  base-directory: .
   name: build-artifact-name
   discard-paths: no
